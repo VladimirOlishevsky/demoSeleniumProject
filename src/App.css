@@ -1,0 +1,41 @@
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  place-items: center;
+  text-align: center;
+  min-width: 320px;
+  min-height: 100vh;
+  font-size: 16px;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 16px;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.description {
+  max-width: 600px;
+  line-height: 24px;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  gap: 12px;
+}
+
+.submit-button {
+  width: 200px;
+}
