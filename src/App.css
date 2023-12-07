@@ -36,6 +36,14 @@ body {
   gap: 12px;
 }
 
-.submit-button {
+.submit-button,
+.logout-button {
   width: 200px;
+}
+
+.success-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
 }

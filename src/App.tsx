@@ -3,11 +3,13 @@ import './App.css'
 import { Button, TextInput } from '@gravity-ui/uikit';
 
 function App() {
-  const [isLogged, setIsLogged] = useState<boolean>(false)
-  const loginControlRef = useRef<HTMLInputElement | null>(null)
-  const passwordControlRef = useRef<HTMLInputElement | null>(null)
+  const [isLogged, setIsLogged] = useState<boolean>(false);
+  const loginControlRef = useRef<HTMLInputElement | null>(null);
+  const passwordControlRef = useRef<HTMLInputElement | null>(null);
 
-  return (
+  return isLogged ? (
+    <SuccessLoginPage setIsLogged={setIsLogged} />
+  ) : (
     <div className="page-wrapper">
       <h1>Test login</h1>
       <div className="description">
@@ -36,6 +38,27 @@ function App() {
           Submit
         </Button>
       </div>
+    </div>
+  )
+}
+
+interface ISuccessLoginPageProps {
+  setIsLogged: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+const SuccessLoginPage = ({ setIsLogged }: ISuccessLoginPageProps) => {
+  return (
+    <div className="success-page-wrapper">
+      <h1>Logged In Successfully</h1>
+      <div>Congratulations! You successfully logged in!</div>
+      <Button
+        view="action"
+        className="logout-button"
+        size="l"
+        onClick={() => setIsLogged(false)}
+      >
+        Log out
+      </Button>
     </div>
   )
 }
