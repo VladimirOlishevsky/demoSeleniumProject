@@ -23,8 +23,8 @@ function App() {
         <div>Password: <strong>Password123</strong></div>
       </div>
       <div className="form-wrapper">
-        <TextInput controlRef={loginControlRef} size="l" pin="round-round" label="Username" hasClear />
-        <TextInput controlRef={passwordControlRef} size="l" pin="round-round" label="Password" hasClear />
+        <TextInput controlRef={loginControlRef} size="l" pin="round-round" label="Username" hasClear name='Username' />
+        <TextInput controlRef={passwordControlRef} size="l" pin="round-round" label="Password" hasClear name='Password' />
         <Button
           view="outlined-action"
           size="l"
