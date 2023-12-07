@@ -63,8 +63,4 @@ const SuccessLoginPage = ({ setIsLogged }: ISuccessLoginPageProps) => {
   )
 }
 
-// test commit 
-// test commit 
-// test commit 
-
 export default App
