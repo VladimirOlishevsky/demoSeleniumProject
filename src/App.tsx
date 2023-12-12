@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react'
 import './App.css'
-import { Button, TextInput, Spin } from '@gravity-ui/uikit';
+import { Button, TextInput } from '@gravity-ui/uikit';
 
 
 type TLoading = 'initial' | 'pending' | 'success'
@@ -10,10 +10,6 @@ function App() {
   const [loadingState, setLoadingState] = useState<TLoading>('initial');
   const loginControlRef = useRef<HTMLInputElement | null>(null);
   const passwordControlRef = useRef<HTMLInputElement | null>(null);
-
-  if(loadingState === 'pending') {
-    return <Spin size='xl' />
-  }
 
   return isLogged && loadingState === 'success' ? (
     <SuccessLoginPage setIsLogged={setIsLogged} />
